@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llenar Tablas</title>
+</head>
+<body>
+    <h1>Formulario para Llenar Tablas</h1>
+    <form method="post" action="{% url 'exito' %}">
+        {% csrf_token %}
+        <label for="nombre_usuario">Nombre de Usuario:</label>
+        <input type="text" id="nombre_usuario" name="nombre_usuario"><br><br>
+        <label for="biografia">Biografía:</label><br>
+        <textarea id="biografia" name="biografia" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="Guardar">
+    </form>
+</body>
+</html>
